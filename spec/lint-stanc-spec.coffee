@@ -147,14 +147,14 @@ PARSER EXPECTED: <one of the following:
   or '}' to close variable declarations>
 """
 
-describe "The stanc provider for Linter" ->
+describe "The stanc provider for Linter", ->
 
   beforeEach ->
     waitsForPromise ->
       atom.packages.activatePackage('linter-stanc')
 
   it 'should be in the packages list', ->
-    expect atom.packages.isPackageLoaded('linter-stanc')).toBe(true)
+    expect(atom.packages.isPackageLoaded('linter-stanc')).toBe(true)
 
   it 'should be an active package', ->
     expect(atom.packages.isPackageActive('linter-stanc')).toBe(true)
